@@ -76,13 +76,13 @@
 					<nav class="header-menu">
 						<ul>
 						
-							<li><a href="/">主页</a></li>
+							<li><a href="/">Home</a></li>
 				        
-							<li><a href="/archives">所有文章</a></li>
+							<li><a href="/archives">All</a></li>
 				        
-							<li><a href="/categories/program">技术</a></li>
+							<li><a href="/categories/studying">Studying</a></li>
 				        
-							<li><a href="/categories/reading">书摘</a></li>
+							<li><a href="/categories/reading">Reading</a></li>
 				        
 						</ul>
 					</nav>
@@ -104,7 +104,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/progress/" style="font-size: 10px;">progress</a> <a href="/tags/study/" style="font-size: 10px;">study</a> <a href="/tags/success/" style="font-size: 10px;">success</a> <a href="/tags/个人/" style="font-size: 10px;">个人</a> <a href="/tags/创业/" style="font-size: 10px;">创业</a> <a href="/tags/团队/" style="font-size: 10px;">团队</a>
+						<a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/Windows/" style="font-size: 10px;">Windows</a> <a href="/tags/progress/" style="font-size: 10px;">progress</a> <a href="/tags/study/" style="font-size: 10px;">study</a> <a href="/tags/success/" style="font-size: 10px;">success</a> <a href="/tags/个人/" style="font-size: 10px;">个人</a> <a href="/tags/共享文件夹/" style="font-size: 10px;">共享文件夹</a> <a href="/tags/创业/" style="font-size: 10px;">创业</a> <a href="/tags/团队/" style="font-size: 10px;">团队</a>
 					</div>
 				</section>
 				
@@ -137,13 +137,13 @@
 			<nav class="header-menu">
 				<ul>
 				
-					<li><a href="/">主页</a></li>
+					<li><a href="/">Home</a></li>
 		        
-					<li><a href="/archives">所有文章</a></li>
+					<li><a href="/archives">All</a></li>
 		        
-					<li><a href="/categories/program">技术</a></li>
+					<li><a href="/categories/studying">Studying</a></li>
 		        
-					<li><a href="/categories/reading">书摘</a></li>
+					<li><a href="/categories/reading">Reading</a></li>
 		        
 		        <div class="clearfix"></div>
 				</ul>
@@ -166,11 +166,11 @@
 </nav>
       <div class="body-wrap">
   
-    <article id="post-test" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-linux_file_share" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2015/12/04/test/" class="article-date">
-  	<time datetime="2015-12-03T16:06:39.000Z" itemprop="datePublished">2015-12-04</time>
+      <a href="/2016/07/31/linux_file_share/" class="article-date">
+  	<time datetime="2016-07-31T06:25:39.000Z" itemprop="datePublished">2016-07-31</time>
 </a>
     </div>
   
@@ -183,7 +183,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2015/12/04/test/">部落的力量</a>
+      <a class="article-title" href="/2016/07/31/linux_file_share/">虚拟机与主机共享文件夹的创建</a>
     </h1>
   
 
@@ -192,7 +192,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>1 统计数据可以让人明白很多道理，不过感性的东西更能让人真正改变自己。<br>2 不断取得胜利，超越所有对手，从而成为最聪明，最成功的人，这种体验会使很多人上瘾，从而拖累部落文化向更高层次跃升。<br>3 当人们在观察这个世界的时候，他所看到的东西已经被自己的语言筛选了一遍，而这个过程是看不见的，正如鱼是看不见水的一样，我们通过自己的词汇来看世界，正如我们通过绿色滤光镜看森林一样，我们并不能分辨出哪些是绿色哪些不是，一旦戴它时间久了，我们就会忘记它的存在，我们的世界也会变的只剩绿色。</p>
+        <p>物理环境：主机Ubuntu14.04,虚拟机Virtualbox,虚拟机中的主机win10<br>为什么要写：网络上大多数共享文件夹的创建教程基本都是windows为主机，linux为虚拟主机，自己花了点时间折腾了下这个逆过程。<br>1.打开虚拟机，首先安装Virtualbox增强功能包（点击Devices-&gt;Insert Guest Additions CD image）。<br>2.点击状态栏“设备-&gt;共享文件夹”，点击右上角添加按钮，选择共享文件夹路径，共享文件夹名称，如ShareFolder，选择固定分配，确定即可。<br>3.进入到win10系统中，找到网络映射驱动器 <a href="http://jingyan.baidu.com/article/425e69e6d99fb9be15fc1687.html" target="_blank" rel="external">Win10网络映射驱动器</a> ，驱动器盘符自选，文件夹填“\vboxsvr\你的共享文件夹名”，如我的“\vboxsvr\ShareFolder”,其他选项默认，点击完成。（第一次创建可能会报错，不用担心）<br>4.在win10我的电脑-设备和驱动器就能看到VirtualBox Guest Additions,双击进行安装。完成安装后再执行步骤三，这次就能创建成功，然后你会看到多出来一个叫“ShareFolder”的盘，这时win10中这个盘跟主机的ShareFolder文件夹就能共享文件了，It’s cool!</p>
 
       
     </div>
@@ -201,12 +201,12 @@
       
       
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/个人/">个人</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/创业/">创业</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/团队/">团队</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Windows/">Windows</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/共享文件夹/">共享文件夹</a></li></ul>
 	</div>
 
       
 	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/reading/">reading</a>
+	<a class="article-category-link" href="/categories/studying/">studying</a>
 	</div>
 
 
@@ -265,7 +265,66 @@
 
       
 	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/随笔/">随笔</a>
+	<a class="article-category-link" href="/categories/thinking/">thinking</a>
+	</div>
+
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-test" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/12/04/test/" class="article-date">
+  	<time datetime="2015-12-03T16:06:39.000Z" itemprop="datePublished">2015-12-04</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/12/04/test/">部落的力量</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1 统计数据可以让人明白很多道理，不过感性的东西更能让人真正改变自己。<br>2 不断取得胜利，超越所有对手，从而成为最聪明，最成功的人，这种体验会使很多人上瘾，从而拖累部落文化向更高层次跃升。<br>3 当人们在观察这个世界的时候，他所看到的东西已经被自己的语言筛选了一遍，而这个过程是看不见的，正如鱼是看不见水的一样，我们通过自己的词汇来看世界，正如我们通过绿色滤光镜看森林一样，我们并不能分辨出哪些是绿色哪些不是，一旦戴它时间久了，我们就会忘记它的存在，我们的世界也会变的只剩绿色。</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/个人/">个人</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/创业/">创业</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/团队/">团队</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/reading/">reading</a>
 	</div>
 
 
