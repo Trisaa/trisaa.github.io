@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Android Transition | Hello Guys</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Android Transition Framwork 主要用来做三件事：
+
+Activity间的转场动画；
+不同Activity或Fragment间元素共享，让交互更连贯；
+同一个Activity之间一些View的变换动画。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android Transition">
+<meta property="og:url" content="http://yoursite.com/2016/08/30/android_transition/index.html">
+<meta property="og:site_name" content="Hello Guys">
+<meta property="og:description" content="Android Transition Framwork 主要用来做三件事：
+
+Activity间的转场动画；
+不同Activity或Fragment间元素共享，让交互更连贯；
+同一个Activity之间一些View的变换动画。">
+<meta property="og:image" content="https://raw.githubusercontent.com/lgvalle/Material-Animations/master/screenshots/transition_A_to_B.png">
+<meta property="og:image" content="http://7xoww9.com1.z0.glb.clouddn.com/transition_explode.gif">
+<meta property="og:image" content="http://7xoww9.com1.z0.glb.clouddn.com/transition_slide.gif">
+<meta property="og:image" content="http://7xoww9.com1.z0.glb.clouddn.com/transition_fade.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/lgvalle/Material-Animations/master/screenshots/shared_element.png">
+<meta property="og:image" content="http://7xoww9.com1.z0.glb.clouddn.com/transition_share_elements.gif">
+<meta property="og:image" content="http://7xoww9.com1.z0.glb.clouddn.com/transition_reveal.gif">
+<meta property="og:updated_time" content="2016-08-29T16:27:43.589Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Android Transition">
+<meta name="twitter:description" content="Android Transition Framwork 主要用来做三件事：
+
+Activity间的转场动画；
+不同Activity或Fragment间元素共享，让交互更连贯；
+同一个Activity之间一些View的变换动画。">
+  
+    <link rel="alternative" href="/atom.xml" title="Hello Guys" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="http://7xoww9.com1.z0.glb.clouddn.com/solar.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Terry</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">study with passion</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">Home</a></li>
+				        
+							<li><a href="/archives">All</a></li>
+				        
+							<li><a href="/categories/studying">Studying</a></li>
+				        
+							<li><a href="/categories/reading">Reading</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/Trisaa" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="http://weibo.com/u/2954352343" title="weibo">weibo</a>
+					        
+								<a class="rss" target="_blank" href="/#" title="rss">rss</a>
+					        
+								<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/duan-mu-96" title="zhihu">zhihu</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/Android/" style="font-size: 10px;">Android</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/Windows/" style="font-size: 10px;">Windows</a> <a href="/tags/progress/" style="font-size: 10px;">progress</a> <a href="/tags/study/" style="font-size: 10px;">study</a> <a href="/tags/success/" style="font-size: 10px;">success</a> <a href="/tags/个人/" style="font-size: 10px;">个人</a> <a href="/tags/共享文件夹/" style="font-size: 10px;">共享文件夹</a> <a href="/tags/创业/" style="font-size: 10px;">创业</a> <a href="/tags/团队/" style="font-size: 10px;">团队</a>
+					</div>
+				</section>
+				
+				
+				
+
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Terry</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="http://7xoww9.com1.z0.glb.clouddn.com/solar.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Terry</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">study with passion</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">Home</a></li>
+		        
+					<li><a href="/archives">All</a></li>
+		        
+					<li><a href="/categories/studying">Studying</a></li>
+		        
+					<li><a href="/categories/reading">Reading</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/Trisaa" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/u/2954352343" title="weibo">weibo</a>
+			        
+						<a class="rss" target="_blank" href="/#" title="rss">rss</a>
+			        
+						<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/duan-mu-96" title="zhihu">zhihu</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-android_transition" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/08/30/android_transition/" class="article-date">
+  	<time datetime="2016-08-29T16:01:39.000Z" itemprop="datePublished">2016-08-30</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Android Transition
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li></ul>
+	</div>
+
+        
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/studying/">studying</a>
+	</div>
+
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="https://developer.android.com/training/transitions/overview.html" target="_blank" rel="external">Android Transition Framwork</a> 主要用来做<strong>三件事</strong>：</p>
+<ol>
+<li>Activity间的转场动画；</li>
+<li>不同Activity或Fragment间元素共享，让交互更连贯；</li>
+<li>同一个Activity之间一些View的变换动画。</li>
+</ol>
+<a id="more"></a>
+<h1 id="1-Activity转场效果">1.Activity转场效果</h1><hr>
+<p><img src="https://raw.githubusercontent.com/lgvalle/Material-Animations/master/screenshots/transition_A_to_B.png" alt=""><br>当从<code>ActivityA</code>切换到<code>ActivityB</code>时我们可以跟以前一样分别定义A的退出动画和B的进入动画，5.0之后<code>android.transition.Transition</code>提供给我们三个可以直接使用的transition：<strong>Explode</strong>,<strong>Slide</strong>,<strong>Fade</strong>.我们看一下三种效果的对比图。</p>
+<table>
+<thead>
+<tr>
+<th>Explode</th>
+<th>Slide</th>
+<th>Fade</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="http://7xoww9.com1.z0.glb.clouddn.com/transition_explode.gif" alt=""></td>
+<td><img src="http://7xoww9.com1.z0.glb.clouddn.com/transition_slide.gif" alt=""></td>
+<td><img src="http://7xoww9.com1.z0.glb.clouddn.com/transition_fade.gif" alt=""></td>
+</tr>
+</tbody>
+</table>
+<p>而你需要做的，首先对Activity的ThemeStyle添加<code>windowContentTransitions</code>属性：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">style</span> <span class="attribute">name</span>=<span class="value">"AppTheme"</span> <span class="attribute">parent</span>=<span class="value">"Theme.AppCompat.Light.DarkActionBar"</span>&gt;</span><span class="css"> </span><br><span class="line">  ...</span><br><span class="line">  &lt;!<span class="tag">--</span> 允许使用<span class="tag">transitions</span> <span class="tag">--</span>&gt;  </span><br><span class="line">  &lt;<span class="tag">item</span> <span class="tag">name</span>="<span class="tag">android</span><span class="pseudo">:windowContentTransitions"</span>&gt;<span class="tag">true</span>&lt;/<span class="tag">item</span>&gt;  </span><br><span class="line">  &lt;!<span class="tag">--</span>是否覆盖执行，其实可以理解成是否同步执行还是顺序执行<span class="tag">--</span>&gt;  </span><br><span class="line">  &lt;<span class="tag">item</span> <span class="tag">name</span>="<span class="tag">android</span><span class="pseudo">:windowAllowEnterTransitionOverlap"</span>&gt;<span class="tag">false</span>&lt;/<span class="tag">item</span>&gt;  </span><br><span class="line">  &lt;<span class="tag">item</span> <span class="tag">name</span>="<span class="tag">android</span><span class="pseudo">:windowAllowReturnTransitionOverlap"</span>&gt;<span class="tag">false</span>&lt;/<span class="tag">item</span>&gt;</span><br><span class="line"></span><span class="tag">&lt;/<span class="title">style</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>MainActivity.java(部分关键代码)</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="annotation">@Override</span></span><br><span class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">(Bundle savedInstanceState)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">super</span>.onCreate(savedInstanceState);</span><br><span class="line">    setContentView(R.layout.activity_main);</span><br><span class="line">    Slide slide = <span class="keyword">new</span> Slide();</span><br><span class="line">    slide.setDuration(<span class="number">1000</span>);</span><br><span class="line">    getWindow().setExitTransition(slide);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">switch</span> (view.getId()) &#123;   </span><br><span class="line">    <span class="keyword">case</span> R.id.tv_explode_transition:        </span><br><span class="line">        mIntent.setClass(<span class="keyword">this</span>, TransitionActivity.class);        </span><br><span class="line">        mIntent.putExtra(<span class="string">"transition"</span>, <span class="string">"explode"</span>);        </span><br><span class="line">        startActivity(mIntent, ActivityOptions.makeSceneTransitionAnimation(<span class="keyword">this</span>).toBundle());</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> R.id.tv_slide_transition:</span><br><span class="line">        mIntent.setClass(<span class="keyword">this</span>, TransitionActivity.class);</span><br><span class="line">        mIntent.putExtra(<span class="string">"transition"</span>, <span class="string">"slide"</span>);</span><br><span class="line">        startActivity(mIntent, ActivityOptions.makeSceneTransitionAnimation(<span class="keyword">this</span>).toBundle());</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> R.id.tv_fade_transition:</span><br><span class="line">        mIntent.setClass(<span class="keyword">this</span>, TransitionActivity.class);</span><br><span class="line">        mIntent.putExtra(<span class="string">"transition"</span>, <span class="string">"fade"</span>);</span><br><span class="line">        startActivity(mIntent, ActivityOptions.makeSceneTransitionAnimation(<span class="keyword">this</span>).toBundle());</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>用<code>startActivity(mIntent, ActivityOptions.makeSceneTransitionAnimation(this).toBundle());</code>来替换之前的startActivity();</p>
+<blockquote>
+<p>TransitionActivity.java(部分关键代码)</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">switch</span> (transition) &#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="string">"explode"</span>:</span><br><span class="line">        imageView.setBackgroundResource(R.drawable.circle_red);</span><br><span class="line">        Explode explode = <span class="keyword">new</span> Explode();</span><br><span class="line">        explode.setDuration(<span class="number">1000L</span>);</span><br><span class="line">        getWindow().setEnterTransition(explode);</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="string">"slide"</span>:</span><br><span class="line">        imageView.setBackgroundResource(R.drawable.circle_purple);</span><br><span class="line">        Slide slide = <span class="keyword">new</span> Slide(Gravity.BOTTOM);</span><br><span class="line">        slide.setDuration(<span class="number">1000L</span>);</span><br><span class="line">        getWindow().setEnterTransition(slide);</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="string">"fade"</span>:</span><br><span class="line">        imageView.setBackgroundResource(R.drawable.circle_blue);</span><br><span class="line">        Fade fade = <span class="keyword">new</span> Fade();</span><br><span class="line">        fade.setDuration(<span class="number">1000L</span>);</span><br><span class="line">        getWindow().setEnterTransition(fade);</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>让我们来分析以下具体发生了什么：</p>
+<ul>
+<li>首先ActivityA启动了ActivityB；</li>
+<li>Transition Framework找到A的退出动画（Slide）并且应用；</li>
+<li>Transition Framework找到B的进入动画（Explode）并且应用；</li>
+<li>返回事件被触发后，Transition Framework执行进入动画和退出动画的逆向过程（但是如果我们定义了returnTransition和reenterTransition动画，返回效果将会按照我们定义的动画执行）。</li>
+</ul>
+<h1 id="2-元素共享">2.元素共享</h1><hr>
+<p><img src="https://raw.githubusercontent.com/lgvalle/Material-Animations/master/screenshots/shared_element.png" alt=""></p>
+<p><div align="center"><br><img src="http://7xoww9.com1.z0.glb.clouddn.com/transition_share_elements.gif" alt=""><br></div><br>1.首先我们需要做的仍然是去定义Theme的<code>android:windowContentTransitions</code>为true；<br>2.然后对不同activity或fragment的共享的view元素设置统一的 <strong>android:transitionName</strong>：</p>
+<blockquote>
+<p>activity_main.xml</p>
+</blockquote>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">LinearLayout</span></span><br><span class="line">    <span class="attribute">android:id</span>=<span class="value">"@+id/tv_share_elements"</span></span><br><span class="line">    <span class="attribute">android:layout_width</span>=<span class="value">"match_parent"</span></span><br><span class="line">    <span class="attribute">android:layout_height</span>=<span class="value">"56dp"</span></span><br><span class="line">    <span class="attribute">android:background</span>=<span class="value">"?android:attr/selectableItemBackground"</span></span><br><span class="line">    <span class="attribute">android:orientation</span>=<span class="value">"horizontal"</span></span><br><span class="line">    <span class="attribute">android:paddingLeft</span>=<span class="value">"@dimen/activity_horizontal_margin"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">ImageView</span></span><br><span class="line">        <span class="attribute">android:id</span>=<span class="value">"@+id/img_share"</span></span><br><span class="line">        <span class="attribute">android:layout_width</span>=<span class="value">"wrap_content"</span></span><br><span class="line">        <span class="attribute">android:layout_height</span>=<span class="value">"wrap_content"</span></span><br><span class="line">        <span class="attribute">android:layout_gravity</span>=<span class="value">"center_vertical"</span></span><br><span class="line">        <span class="attribute">android:background</span>=<span class="value">"@drawable/circle_orange"</span></span><br><span class="line">        <span class="attribute">android:transitionName</span>=<span class="value">"share"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">TextView</span></span><br><span class="line">        <span class="attribute">android:id</span>=<span class="value">"@+id/tv_share"</span></span><br><span class="line">        <span class="attribute">android:layout_width</span>=<span class="value">"wrap_content"</span></span><br><span class="line">        <span class="attribute">android:layout_height</span>=<span class="value">"wrap_content"</span></span><br><span class="line">        <span class="attribute">android:layout_gravity</span>=<span class="value">"center_vertical"</span></span><br><span class="line">        <span class="attribute">android:layout_marginLeft</span>=<span class="value">"12dp"</span></span><br><span class="line">        <span class="attribute">android:gravity</span>=<span class="value">"center_vertical"</span></span><br><span class="line">        <span class="attribute">android:text</span>=<span class="value">"Shared Elements"</span></span><br><span class="line">        <span class="attribute">android:transitionName</span>=<span class="value">"share_text"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">LinearLayout</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>fragment_share_elements1.xml</p>
+</blockquote>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">View</span></span><br><span class="line">    <span class="attribute">android:id</span>=<span class="value">"@+id/view_top"</span></span><br><span class="line">    <span class="attribute">android:layout_width</span>=<span class="value">"match_parent"</span></span><br><span class="line">    <span class="attribute">android:layout_height</span>=<span class="value">"200dp"</span></span><br><span class="line">    <span class="attribute">android:background</span>=<span class="value">"@color/color_orange"</span></span><br><span class="line">    <span class="attribute">android:transitionName</span>=<span class="value">"share"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">View</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">TextView</span></span><br><span class="line">    <span class="attribute">android:id</span>=<span class="value">"@+id/tv_transition_type"</span></span><br><span class="line">    <span class="attribute">android:layout_width</span>=<span class="value">"match_parent"</span></span><br><span class="line">    <span class="attribute">android:layout_height</span>=<span class="value">"wrap_content"</span></span><br><span class="line">    <span class="attribute">android:layout_marginTop</span>=<span class="value">"@dimen/activity_vertical_margin"</span></span><br><span class="line">    <span class="attribute">android:gravity</span>=<span class="value">"center"</span></span><br><span class="line">    <span class="attribute">android:text</span>=<span class="value">"Shared Elements"</span></span><br><span class="line">    <span class="attribute">android:transitionName</span>=<span class="value">"share_text"</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>fragment_share_elements2.xml</p>
+</blockquote>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">ImageView</span></span><br><span class="line">    <span class="attribute">android:id</span>=<span class="value">"@+id/img_share"</span></span><br><span class="line">    <span class="attribute">android:layout_width</span>=<span class="value">"120dp"</span></span><br><span class="line">    <span class="attribute">android:layout_height</span>=<span class="value">"120dp"</span></span><br><span class="line">    <span class="attribute">android:layout_gravity</span>=<span class="value">"center_horizontal"</span></span><br><span class="line">    <span class="attribute">android:layout_marginTop</span>=<span class="value">"20dp"</span></span><br><span class="line">    <span class="attribute">android:background</span>=<span class="value">"@drawable/circle_orange"</span></span><br><span class="line">    <span class="attribute">android:transitionName</span>=<span class="value">"share"</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+<p>3.使用<code>ActivityOptions.makeSceneTransitionAnimation()</code>来定义共享的view和transitionName</p>
+<blockquote>
+<p>MainActivity.java</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mIntent.setClass(<span class="keyword">this</span>, ShareElementsActivity.class);</span><br><span class="line">ActivityOptions transitionActivityOptions = ActivityOptions.makeSceneTransitionAnimation(MainActivity.<span class="keyword">this</span>, findViewById(R.id.img_share), <span class="string">"share"</span>);</span><br><span class="line">startActivity(mIntent, transitionActivityOptions.toBundle());</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>ShareElementsFragment1.java</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">Slide slideTransition = <span class="keyword">new</span> Slide(Gravity.LEFT);</span><br><span class="line">slideTransition.setDuration(<span class="number">1000L</span>);</span><br><span class="line">ChangeBounds changeBoundsTransition = <span class="keyword">new</span> ChangeBounds();</span><br><span class="line">changeBoundsTransition.setDuration(<span class="number">1000L</span>);</span><br><span class="line">sharedElementFragment2.setEnterTransition(slideTransition);</span><br><span class="line">sharedElementFragment2.setAllowEnterTransitionOverlap(<span class="keyword">true</span>);</span><br><span class="line">sharedElementFragment2.setAllowReturnTransitionOverlap(<span class="keyword">true</span>);</span><br><span class="line">sharedElementFragment2.setSharedElementEnterTransition(changeBoundsTransition);</span><br><span class="line">getFragmentManager().beginTransaction()</span><br><span class="line">        .replace(R.id.framelayout_container, sharedElementFragment2)</span><br><span class="line">        .addToBackStack(<span class="keyword">null</span>)</span><br><span class="line">        .addSharedElement(sharedView, <span class="string">"share"</span>)</span><br><span class="line">        .commit();</span><br></pre></td></tr></table></figure>
+<p>如果两个不同界面有多个元素需要共享的话，使用Pair来包装<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">mIntent.setClass(<span class="keyword">this</span>, ShareElementsActivity.class);</span><br><span class="line">ActivityOptions transitionActivityOptions = ActivityOptions.makeSceneTransitionAnimation(MainActivity.<span class="keyword">this</span></span><br><span class="line">        , Pair.create(findViewById(R.id.img_share), <span class="string">"share"</span>)</span><br><span class="line">        , Pair.create(findViewById(R.id.tv_share), <span class="string">"share_text"</span>));</span><br><span class="line">startActivity(mIntent, transitionActivityOptions.toBundle());</span><br></pre></td></tr></table></figure></p>
+<h1 id="3-水波纹散开效果">3.水波纹散开效果</h1><hr>
+<p>这里我们实现了在RevealActivity中两个View的更换，点击右下角切换按钮，水波纹开始散开，第一个View逐渐消失，第二个View逐渐出现。</p>
+<p><div align="center"><br> <img src="http://7xoww9.com1.z0.glb.clouddn.com/transition_reveal.gif" alt=""><br></div></p>
+<blockquote>
+<p>activity_reveal.xml</p>
+</blockquote>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="pi">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">RelativeLayout</span> <span class="attribute">xmlns:android</span>=<span class="value">"http://schemas.android.com/apk/res/android"</span></span><br><span class="line">    <span class="attribute">android:id</span>=<span class="value">"@+id/ll_container"</span></span><br><span class="line">    <span class="attribute">android:layout_width</span>=<span class="value">"match_parent"</span></span><br><span class="line">    <span class="attribute">android:layout_height</span>=<span class="value">"match_parent"</span></span><br><span class="line">    <span class="attribute">android:orientation</span>=<span class="value">"vertical"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">TextView</span></span><br><span class="line">        <span class="attribute">android:id</span>=<span class="value">"@+id/tv_reveal"</span></span><br><span class="line">        <span class="attribute">android:layout_width</span>=<span class="value">"match_parent"</span></span><br><span class="line">        <span class="attribute">android:layout_height</span>=<span class="value">"wrap_content"</span></span><br><span class="line">        <span class="attribute">android:padding</span>=<span class="value">"@dimen/activity_horizontal_margin"</span></span><br><span class="line">        <span class="attribute">android:text</span>=<span class="value">"acon ipsum dolor amet cupidatat bresaola minim, aliquip beef aute ea porchetta. Meatball brisket do, rump in beef ea ham hock spare ribs mollit qui dolore ipsum voluptate cow. Drumstick prosciutto salami duis jerky jowl. Mollit ball tip short ribs doner fugiat frankfurter leberkas andouille kevin pork loin nostrud ham culpa. Rump pariatur ham hock excepteur picanha pork. Corned beef flank proident shankle rump."</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">TextView</span></span><br><span class="line">        <span class="attribute">android:id</span>=<span class="value">"@+id/tv_reveal2"</span></span><br><span class="line">        <span class="attribute">android:layout_width</span>=<span class="value">"match_parent"</span></span><br><span class="line">        <span class="attribute">android:layout_height</span>=<span class="value">"match_parent"</span></span><br><span class="line">        <span class="attribute">android:background</span>=<span class="value">"@color/color_blue"</span></span><br><span class="line">        <span class="attribute">android:padding</span>=<span class="value">"@dimen/activity_vertical_margin"</span></span><br><span class="line">        <span class="attribute">android:text</span>=<span class="value">"This is the content, we set it visible when the animation finished"</span></span><br><span class="line">        <span class="attribute">android:textColor</span>=<span class="value">"@android:color/white"</span></span><br><span class="line">        <span class="attribute">android:textSize</span>=<span class="value">"18sp"</span></span><br><span class="line">        <span class="attribute">android:visibility</span>=<span class="value">"gone"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">ImageView</span></span><br><span class="line">        <span class="attribute">android:id</span>=<span class="value">"@+id/img_green"</span></span><br><span class="line">        <span class="attribute">android:layout_width</span>=<span class="value">"56dp"</span></span><br><span class="line">        <span class="attribute">android:layout_height</span>=<span class="value">"56dp"</span></span><br><span class="line">        <span class="attribute">android:layout_alignParentBottom</span>=<span class="value">"true"</span></span><br><span class="line">        <span class="attribute">android:layout_alignParentRight</span>=<span class="value">"true"</span></span><br><span class="line">        <span class="attribute">android:layout_marginBottom</span>=<span class="value">"@dimen/activity_vertical_margin"</span></span><br><span class="line">        <span class="attribute">android:layout_marginRight</span>=<span class="value">"@dimen/activity_vertical_margin"</span></span><br><span class="line">        <span class="attribute">android:background</span>=<span class="value">"@drawable/circle_green"</span></span><br><span class="line">        <span class="attribute">android:transitionName</span>=<span class="value">"share"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">RelativeLayout</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>RevealActivity.java</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="annotation">@Override</span></span><br><span class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">(@Nullable Bundle savedInstanceState)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">super</span>.onCreate(savedInstanceState);</span><br><span class="line">    setContentView(R.layout.activity_reveal);</span><br><span class="line">    relativeLayout = (RelativeLayout) findViewById(R.id.ll_container);</span><br><span class="line">    textView = (TextView) findViewById(R.id.tv_reveal);</span><br><span class="line">    textview2 = (TextView) findViewById(R.id.tv_reveal2);</span><br><span class="line">    findViewById(R.id.img_green).setOnTouchListener(<span class="keyword">new</span> View.OnTouchListener() &#123;</span><br><span class="line">        <span class="annotation">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">onTouch</span><span class="params">(View view, MotionEvent motionEvent)</span> </span>&#123;</span><br><span class="line">            <span class="keyword">if</span> (motionEvent.getAction() == MotionEvent.ACTION_DOWN) &#123;</span><br><span class="line">                <span class="keyword">float</span> finalRadius = (<span class="keyword">float</span>) Math.hypot(relativeLayout.getWidth(), relativeLayout.getHeight());</span><br><span class="line">                Animator anim = ViewAnimationUtils.createCircularReveal(textview2, (<span class="keyword">int</span>) motionEvent.getRawX(), (<span class="keyword">int</span>) motionEvent.getRawY(), <span class="number">0</span>, finalRadius);</span><br><span class="line">                anim.setDuration(<span class="number">1000L</span>);</span><br><span class="line">                anim.setInterpolator(<span class="keyword">new</span> AccelerateDecelerateInterpolator());</span><br><span class="line">                anim.addListener(<span class="keyword">new</span> Animator.AnimatorListener() &#123;</span><br><span class="line">                    <span class="annotation">@Override</span></span><br><span class="line">                    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onAnimationStart</span><span class="params">(Animator animator)</span> </span>&#123;</span><br><span class="line">                        textview2.setVisibility(View.VISIBLE);</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="annotation">@Override</span></span><br><span class="line">                    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onAnimationEnd</span><span class="params">(Animator animator)</span> </span>&#123;</span><br><span class="line">                        <span class="comment">//textView.setVisibility(View.VISIBLE);</span></span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="annotation">@Override</span></span><br><span class="line">                    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onAnimationCancel</span><span class="params">(Animator animator)</span> </span>&#123;</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="annotation">@Override</span></span><br><span class="line">                    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onAnimationRepeat</span><span class="params">(Animator animator)</span> </span>&#123;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;);</span><br><span class="line">                anim.start();</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>createCircularReveal的各参数代表的具体含义<a href="https://developer.android.com/reference/android/view/ViewAnimationUtils.html" target="_blank" rel="external">参照这里</a>。</p>
+<p>#####Demo源码<br><a href="https://github.com/Trisaa/MaterialTranstion" target="_blank" rel="external">https://github.com/Trisaa/MaterialTranstion</a></p>
+<p>#####参考资料<br><a href="https://github.com/lgvalle/Material-Animations" target="_blank" rel="external">https://github.com/lgvalle/Material-Animations</a></p>
+<p><a href="https://github.com/hehonghui/android-tech-frontier/tree/master/others/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BAAndroid%20%E6%96%B0%E7%89%B9%E6%80%A7-Transition-Part-1" target="_blank" rel="external">https://github.com/hehonghui/android-tech-frontier/tree/master/others/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BAAndroid%20%E6%96%B0%E7%89%B9%E6%80%A7-Transition-Part-1</a></p>
+<p>#####其他转场酷炫的动画</p>
+<p><a href="https://github.com/openaphid/android-flip]" target="_blank" rel="external">折叠翻页效果</a></p>
+<p><a href="https://github.com/DesarrolloAntonio/FragmentTransactionExtended" target="_blank" rel="external">Fragment Transition</a></p>
+<p><a href="https://github.com/jaychou2012/SwitchLayout" target="_blank" rel="external">SwitchLayout</a></p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/07/31/linux_file_share/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">虚拟机与主机共享文件夹的创建</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 Terry
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>
